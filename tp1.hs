@@ -35,7 +35,7 @@ primerasLetras::String->String
 primerasLetras patente = take 2 patente -- funcion take ("cantidad de letras a tomar") (String)
 
 costoArreglo::Auto -> Int
-costoArreglo (Auto patente _ _ _ _ ) | ((>6).length ) patente = 12500
+costoArreglo (Auto patente _ _ _ _ ) | ((==6).length ) patente = 12500
                                      | (primerasLetras patente == "DJ") && (last patente == '4') = length patente * 3000
                                      | (primerasLetras patente == "DJ") && (last patente /= '4') = 20000
                                      | otherwise = 15000
